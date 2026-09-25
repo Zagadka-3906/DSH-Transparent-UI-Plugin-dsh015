@@ -1,6 +1,6 @@
-# Aqua 玻璃主题插件（DSH 0.1.5 移植版）
+# Aqua 玻璃主题插件（DSH 0.1.5+ 移植版）
 
-移植自 [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin) v1.3.1，适配 DSH **0.1.5-rc.1**（npm `latest`）客户端 API，已实测通过。上游最后发布于 2026-08-17，面向旧版 API，在新版 DSH 上会导致 web profile 无法启动。
+移植自 [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin) v1.3.1，适配 DSH **0.1.5–0.1.7** 客户端 API，已实测通过。上游最后发布于 2026-08-17，面向旧版 API，在 DSH 0.1.2+ 上会导致 web profile 无法启动。
 
 ## 安装
 
@@ -30,8 +30,8 @@ dsh plugin --profile web add https://github.com/Zagadka-3906/DSH-Transparent-UI-
 
 | DSH 版本 | 状态 |
 | --- | --- |
-| 0.1.5-rc.1 | ✅ 实测通过 |
-| 0.1.5-rc.2 | 理论可用（未实测） |
+| 0.1.7-rc.2 | ✅ 实测通过 |
+| 0.1.5-rc.1 ~ rc.3 | ✅ 实测通过 |
 | ≤ 0.1.1-rc.2 | 请用上游原版 |
 
 ## 许可
