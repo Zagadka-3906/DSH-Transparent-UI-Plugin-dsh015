@@ -23,6 +23,7 @@ dsh plugin --profile web add https://github.com/Zagadka-3906/DSH-Transparent-UI-
 1. **store 模块迁移**（`lib/client.js`）：`require("@deepseek-ai/dsh-client-runtime/client")` → `require("@deepseek-ai/dsh-client-store")`。旧包自 DSH 0.1.2 起移除，其唯一被用到的导出 `defineStore` 已原样迁入新包（两版函数体逐字一致），由前端核心注册为浏览器模块。
 2. **清单声明**（`package.json`）：`dsh.client.inject` 从 6 个旧 roster 包改为现存的 `ui-theme` / `locale` / `ui-settings` 三个，`peerDependencies` 同步。
 3. **总开关迁址**（`lib/client.js`）：0.1.5 的「插件配置」页改为按 Host 设置命名空间分发的键控槽位，第三方无 `key` 卡片不再渲染，而那是主题唯一总开关。故将开关卡片（`id: "aqua-master"`，`order: 9`，独立 store）额外注册进通用设置，与外观旋钮行双向同步；原插件页注册保留，若日后恢复旧机制可自动复活。
+4. **图标导出改名回退**（`lib/client.js`，`1.3.1-dsh015.2` 起）：0.1.7 前端把 16px 勾选图标从 `IconCheckOutline16` 改名为 `IconCheckOutlineMedium`/`IconCheckOutlineRegular`。插件在 require 后补了一个别名 shim（旧名存在时不动），同一构建产物同时兼容 0.1.5 与 0.1.7。
 
 如需从源码重建（上游 npm 包不含 `src/`），按上述三处在 `src/client/index.ts`、`src/client/settings-store.ts` 与 `package.json` 复现同样改动即可。
 
@@ -30,7 +31,7 @@ dsh plugin --profile web add https://github.com/Zagadka-3906/DSH-Transparent-UI-
 
 | DSH 版本 | 状态 |
 | --- | --- |
-| 0.1.7-rc.2 | ✅ 实测通过 |
+| 0.1.7-rc.2 | ✅ 实测通过（需 `1.3.1-dsh015.2`+） |
 | 0.1.5-rc.1 ~ rc.3 | ✅ 实测通过 |
 | ≤ 0.1.1-rc.2 | 请用上游原版 |
 
