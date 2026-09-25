@@ -1,4 +1,4 @@
-# Aqua 玻璃主题插件（DSH 0.1.5+ 移植版）
+# Aqua 玻璃主题插件
 
 移植自 [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin) v1.3.1，适配 DSH **0.1.5–0.1.7** 客户端 API，已实测通过。上游最后发布于 2026-08-17，面向旧版 API，在 DSH 0.1.2+ 上会导致 web profile 无法启动。
 
